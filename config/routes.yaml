@@ -1,0 +1,2 @@
+app:
+  resource: '../src/Application/Resources/config/routing.yaml'
