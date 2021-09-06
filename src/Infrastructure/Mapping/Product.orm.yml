@@ -1,0 +1,39 @@
+App\Domain\Model\Product:
+    type: entity
+    table: product
+    repositoryClass: App\Infrastructure\Repository\DoctrineProductRepository
+    id:
+        id:
+            type: integer
+            scale: null
+            length: null
+            unique: false
+            nullable: false
+            precision: null
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        name:
+            type: string
+            scale: null
+            length: 100
+            unique: false
+            nullable: false
+            precision: null
+        sku:
+            type: string
+            scale: null
+            length: 50
+            unique: false
+            nullable: false
+            precision: null
+        priceCents:
+            type: integer
+            scale: null
+            length: null
+            unique: false
+            nullable: false
+            precision: null
+            column: price_cents
+    lifecycleCallbacks: {  }

@@ -26,7 +26,7 @@ services:
             - '../src/Tests/'
             - '../src/Application/Controller/'
 
-    App\Domain\Repository\ProductRepository: '@App\Infrastructure\Repository\Mysql\MysqlProductRepository'
+    App\Domain\Repository\ProductRepository: '@App\Infrastructure\Repository\DoctrineProductRepository'
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
