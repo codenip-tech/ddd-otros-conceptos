@@ -24,4 +24,9 @@ class ProductManager
 
         return $product;
     }
+
+    public function getProduct(string $id): Product
+    {
+        return $this->productRepository->findOneById($id);
+    }
 }

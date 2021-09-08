@@ -27,4 +27,21 @@ class ProductController
             ]
         );
     }
+
+    public function get(Request $request): JsonResponse
+    {
+        $product = $this->productManager->getProduct($request->get('id'));
+        if (!$product) {
+            return new JsonResponse([], JsonResponse::HTTP_NOT_FOUND);
+        }
+
+        return new JsonResponse(
+            [
+                'product' => [
+                    'id' => $product->id(),
+                    'name' => $product->name(),
+                ]
+            ]
+        );
+    }
 }

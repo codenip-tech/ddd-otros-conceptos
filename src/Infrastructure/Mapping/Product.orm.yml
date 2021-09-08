@@ -12,7 +12,7 @@ App\Domain\Model\Product:
             precision: null
             id: true
             generator:
-                strategy: SEQUENCE
+                strategy: NONE
     fields:
         name:
             type: string

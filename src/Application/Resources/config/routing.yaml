@@ -2,3 +2,7 @@ create_product:
   path: /product
   methods: POST
   controller: App\Application\Controller\ProductController::create
+get_product:
+  path: /product/{id}
+  methods: GET
+  controller: App\Application\Controller\ProductController::get
