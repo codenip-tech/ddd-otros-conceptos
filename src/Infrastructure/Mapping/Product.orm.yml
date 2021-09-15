@@ -4,7 +4,7 @@ App\Domain\Model\Product:
     repositoryClass: App\Infrastructure\Repository\DoctrineProductRepository
     id:
         id:
-            type: integer
+            type: string
             scale: null
             length: null
             unique: false
@@ -29,7 +29,7 @@ App\Domain\Model\Product:
             nullable: false
             precision: null
         priceCents:
-            type: integer
+            type: price_cents
             scale: null
             length: null
             unique: false

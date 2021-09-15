@@ -4,6 +4,7 @@ namespace App\Domain\Service;
 
 use App\Domain\Model\Product;
 use App\Domain\Repository\ProductRepository;
+use App\Domain\Value\PriceCents;
 use Ramsey\Uuid\Uuid;
 
 class ProductManager
@@ -18,7 +19,7 @@ class ProductManager
     public function createProduct(string $name, string $sku, int $priceCents): Product
     {
         $id = Uuid::uuid4()->toString();
-        $product = new Product($id, $name, $sku, $priceCents);
+        $product = new Product($id, $name, $sku, new PriceCents($priceCents));
         
         $this->productRepository->save($product);
 

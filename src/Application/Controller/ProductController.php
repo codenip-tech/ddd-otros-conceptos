@@ -23,6 +23,7 @@ class ProductController
                 'product' => [
                     'id' => $product->id(),
                     'name' => $product->name(),
+                    'price_cents' => $product->priceCents()->value(),
                 ]
             ]
         );
@@ -40,6 +41,7 @@ class ProductController
                 'product' => [
                     'id' => $product->id(),
                     'name' => $product->name(),
+                    'price_cents' => $product->priceCents()->value(),
                 ]
             ]
         );

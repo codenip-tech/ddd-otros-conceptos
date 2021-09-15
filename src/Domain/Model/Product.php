@@ -2,14 +2,16 @@
 
 namespace App\Domain\Model;
 
+use App\Domain\Value\PriceCents;
+
 class Product
 {
     private string $id;
     private string $name;
     private string $sku;
-    private int $priceCents;
+    private PriceCents $priceCents;
 
-    public function __construct(string $id, string $name, string $sku, int $priceCents)
+    public function __construct(string $id, string $name, string $sku, PriceCents $priceCents)
     {
         $this->id = $id;
         $this->name = $name;
@@ -30,5 +32,10 @@ class Product
     public function setName(string $name): void
     {
         $this->name = $name;
+    }
+
+    public function priceCents(): PriceCents
+    {
+        return $this->priceCents;
     }
 }
