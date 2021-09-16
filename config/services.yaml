@@ -27,5 +27,7 @@ services:
             - '../src/Application/Controller/'
             - '../src/Infrastructure/Repository/DoctrineRepository.php'
 
+    App\Domain\Repository\ProductQueryRepository: '@App\Infrastructure\Repository\DoctrineInMemoryCachedRepository'
+
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones

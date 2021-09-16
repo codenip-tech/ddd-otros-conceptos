@@ -4,8 +4,7 @@ namespace App\Domain\Repository;
 
 use App\Domain\Model\Product;
 
-interface ProductRepository
+interface ProductCommandRepository
 {
     public function save(Product $product): void;
-    public function findOneById(string $id): Product;
 }

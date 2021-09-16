@@ -3,11 +3,12 @@
 namespace App\Infrastructure\Repository;
 
 use App\Domain\Model\Product;
-use App\Domain\Repository\ProductRepository;
+use App\Domain\Repository\ProductCommandRepository;
+use App\Domain\Repository\ProductQueryRepository;
 use App\Infrastructure\Repository\DoctrineRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
-class DoctrineProductRepository implements ProductRepository
+class DoctrineProductRepository implements ProductQueryRepository, ProductCommandRepository
 {
     private DoctrineRepository $doctrineRepository;
 
